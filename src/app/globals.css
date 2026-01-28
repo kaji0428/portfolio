@@ -1,0 +1,82 @@
+﻿@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong,
+b {
+  font-family: "Yu Mincho", "Hiragino Mincho ProN", "MS PMincho", serif;
+}
+
+.wafuu-pattern {
+  position: relative;
+  isolation: isolate;
+}
+
+.wafuu-pattern::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.2;
+  background-image:
+    radial-gradient(circle at 12% 18%, rgba(183, 155, 91, 0.14) 0 2px, transparent 3px),
+    radial-gradient(circle at 86% 28%, rgba(47, 62, 92, 0.12) 0 2px, transparent 3px),
+    radial-gradient(circle at 22% 82%, rgba(120, 124, 132, 0.12) 0 2px, transparent 3px),
+    repeating-linear-gradient(
+      60deg,
+      rgba(47, 62, 92, 0.06) 0 1px,
+      transparent 1px 18px
+    ),
+    repeating-linear-gradient(
+      -60deg,
+      rgba(183, 155, 91, 0.05) 0 1px,
+      transparent 1px 18px
+    );
+  background-size:
+    240px 240px,
+    320px 320px,
+    280px 280px,
+    36px 36px,
+    36px 36px;
+  background-position:
+    0 0,
+    100% 0,
+    0 100%,
+    0 0,
+    0 0;
+}
+
+.wafuu-pattern > * {
+  position: relative;
+  z-index: 1;
+}
