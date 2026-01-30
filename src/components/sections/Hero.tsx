@@ -14,7 +14,7 @@ export default function Hero() {
         <div className="absolute right-0 bottom-16 h-2 w-56 rounded-full bg-[#c9d2e6]" />
       </div>
 
-      <div className="relative mx-auto flex w-full max-w-6xl flex-col items-center gap-8 px-4 py-24 text-center">
+      <div className="relative mx-auto flex min-h-[70vh] w-full max-w-6xl flex-col items-center gap-8 px-4 py-24 text-center">
         <div className="pointer-events-none absolute left-0 top-10 -z-0 w-full sm:left-6 sm:top-6">
           <Image
             src="/topmoon.png"
@@ -22,15 +22,14 @@ export default function Hero() {
             width={1040}
             height={1040}
             priority
-            className="h-80 w-auto opacity-90 sm:h-[28rem] lg:h-[32rem]"
+            className="moon-fade-in h-80 w-auto opacity-90 sm:h-[28rem] lg:h-[32rem]"
           />
         </div>
-        <p className="text-sm font-semibold uppercase tracking-[0.28em] text-[#4c5d87]">
-          portfolio
-        </p>
-
-        <div className="relative z-10 flex flex-col items-center gap-4">
-          <h1 className="text-4xl font-black leading-tight text-[#1f2937] sm:text-6xl">
+        <div className="relative z-10 flex w-full flex-1 flex-col items-center justify-center gap-4">
+          <p className="text-sm font-semibold uppercase tracking-[0.28em] text-[#4c5d87]">
+            portfolio
+          </p>
+          <h1 className="text-center text-5xl font-black leading-tight text-[#1f2937] sm:text-6xl lg:text-7xl">
             野月平 快士
           </h1>
           <p className="text-lg font-semibold text-[#2f3e5c]">

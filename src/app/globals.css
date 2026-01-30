@@ -80,3 +80,26 @@ b {
   position: relative;
   z-index: 1;
 }
+
+@keyframes moonFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(24px) scale(0.98);
+  }
+  to {
+    opacity: 0.9;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.moon-fade-in {
+  animation: moonFadeIn 1.8s ease-out both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .moon-fade-in {
+    animation: none;
+    opacity: 0.9;
+    transform: none;
+  }
+}
