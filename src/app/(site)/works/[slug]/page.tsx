@@ -1,15 +1,17 @@
-ï»¿type WorkDetailPageProps = {
-  params: {
+type WorkDetailPageProps = {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 };
 
-export default function WorkDetailPage({ params }: WorkDetailPageProps) {
+export default async function WorkDetailPage({ params }: WorkDetailPageProps) {
+  const { slug } = await params;
+
   return (
     <section className="mx-auto w-full max-w-4xl px-4 py-20">
-      <h1 className="text-3xl font-bold">ä½œå“è©³ç´°</h1>
-      <p className="mt-4 text-black/70">slug: {params.slug}</p>
-      <p className="mt-2 text-black/70">è©³ç´°ãƒšãƒ¼ã‚¸ã‚‚ã“ã®ã‚ã¨ä½œã‚Šè¾¼ã¿ã¾ã™ã€‚</p>
+      <h1 className="text-3xl font-bold">ì•iÚ×</h1>
+      <p className="mt-4 text-black/70">slug: {slug}</p>
+      <p className="mt-2 text-black/70">Ú×ƒy[ƒW‚à‚±‚Ì‚ ‚Æì‚è‚İ‚Ü‚·B</p>
     </section>
   );
 }

@@ -25,13 +25,10 @@ export default function NewsList() {
         <ul className="overflow-hidden rounded-[28px] border border-[#2f3e5c]/10 bg-white shadow-sm">
           {news.map((item) => (
             <li key={`${item.date}-${item.title}`} className="border-t border-black/5 first:border-t-0">
-              <a
-                href={item.href}
-                className="flex flex-col gap-2 px-6 py-5 transition hover:bg-[#f7f5ef] sm:flex-row sm:items-center sm:justify-between"
-              >
+              <div className="flex flex-col gap-2 px-6 py-5 sm:flex-row sm:items-center sm:justify-between">
                 <span className="text-sm font-semibold text-[#4c5d87]">{item.date}</span>
                 <span className="text-base font-semibold text-[#1f2937]">{item.title}</span>
-              </a>
+              </div>
             </li>
           ))}
         </ul>

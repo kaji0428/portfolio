@@ -8,7 +8,7 @@ type NavItem = {
 };
 
 const items: NavItem[] = [
-  { href: "/#top", label: "TOP" },
+  { href: "/", label: "TOP" },
   { href: "/#about", label: "私について" },
   { href: "/#works", label: "作品" },
   { href: "/#news", label: "お知らせ" },
@@ -17,7 +17,7 @@ const items: NavItem[] = [
 
 export default function Nav() {
   const handleAnchorClick = (event: MouseEvent<HTMLAnchorElement>, href: string) => {
-    if (href !== "/#top") return;
+    if (href !== "/") return;
     if (typeof window === "undefined") return;
 
     if (window.location.pathname === "/") {
