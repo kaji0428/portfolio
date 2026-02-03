@@ -161,9 +161,10 @@ export default async function WorkDetailPage({
             <div>
               <p className="text-sm font-semibold uppercase tracking-[0.24em] text-[#4c5d87]">URL</p>
               <ul className="mt-2 space-y-2 pl-4">
-                {work.links.map((link, index) => (
-                  <li key={`${work.slug}-url-${index}`}>
-                    {link.href ? (
+              {work.links.map((link, index) => (
+                <li key={`${work.slug}-url-${index}`} className="flex flex-wrap items-baseline gap-2">
+                  {link.href ? (
+                    <>
                       <a
                         className="font-semibold text-[#2f3e5c] underline-offset-4 hover:underline"
                         href={link.href}
@@ -172,11 +173,13 @@ export default async function WorkDetailPage({
                       >
                         {link.label}
                       </a>
-                    ) : (
-                      <span className="text-black/50">{link.label}（後日追加）</span>
-                    )}
-                  </li>
-                ))}
+                      <span className="text-xs text-black/50">{link.href}</span>
+                    </>
+                  ) : (
+                    <span className="text-black/50">{link.label}（後日追加）</span>
+                  )}
+                </li>
+              ))}
               </ul>
             </div>
 
