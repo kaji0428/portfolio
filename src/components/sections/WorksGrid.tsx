@@ -5,12 +5,36 @@
 };
 
 const works: Work[] = [
-  { slug: "work-1", title: "和風コーポレート", description: "信頼感を高める静かなトーン設計。" },
-  { slug: "work-2", title: "採用サイト", description: "人柄と価値観が伝わる情報導線。" },
-  { slug: "work-3", title: "サービスLP", description: "強みが迷わず届く構成と余白。" },
-  { slug: "work-4", title: "ブランドサイト", description: "世界観を崩さないUI設計。" },
-  { slug: "work-5", title: "イベント告知", description: "短時間で要点が伝わる設計。" },
-  { slug: "work-6", title: "プロトタイプ", description: "検証しやすい軽量な実装構成。" },
+  {
+    slug: "chrono-voice",
+    title: "ChronoVoice",
+    description: "ToDo管理カレンダーアプリ（校内ハッカソン）",
+  },
+  {
+    slug: "web-design",
+    title: "webサイトデザイン作成",
+    description: "企業連携でのWebサイトデザイン制作",
+  },
+  {
+    slug: "advice-app",
+    title: "格言アドバイスアプリ",
+    description: "Advice API / Deepl API 連携アプリ",
+  },
+  {
+    slug: "cookgod",
+    title: "CookGOD",
+    description: "レシピ管理アプリ（Spring Boot）",
+  },
+  {
+    slug: "commitscope",
+    title: "CommitScope",
+    description: "GitHub分析管理アプリ（サポーターズ様）",
+  },
+  {
+    slug: "hackidea",
+    title: "HackIdea",
+    description: "ハッカソンのアイデア提案と掲示板アプリ",
+  },
 ];
 
 export default function WorksGrid() {
