@@ -133,35 +133,34 @@ export default async function WorkDetailPage({
 
   return (
     <main className="mx-auto w-full max-w-6xl px-4 py-16">
-      <div className="rounded-[24px] border border-black/5 bg-white shadow-sm">
-        <div className="mx-auto w-full max-w-4xl overflow-hidden rounded-[24px]">
-          {youtubeId ? (
-            <div className="aspect-video w-full">
-              <iframe
-                className="h-full w-full"
-                src={`https://www.youtube.com/embed/${youtubeId}`}
-                title={work.title}
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              />
-            </div>
-          ) : (
-            <div className="aspect-video w-full bg-[linear-gradient(135deg,#dfe6f5_0%,#f7f5ef_55%,#e9e2cf_100%)]" />
-          )}
-        </div>
+      <div className="mx-auto w-full max-w-4xl">
+        {youtubeId ? (
+          <div className="aspect-video w-full overflow-hidden rounded-[24px] border border-black/5 bg-white shadow-sm">
+            <iframe
+              className="h-full w-full"
+              src={`https://www.youtube.com/embed/${youtubeId}`}
+              title={work.title}
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
+          </div>
+        ) : (
+          <div className="aspect-video w-full overflow-hidden rounded-[24px] border border-black/5 bg-[linear-gradient(135deg,#dfe6f5_0%,#f7f5ef_55%,#e9e2cf_100%)] shadow-sm" />
+        )}
+      </div>
 
-        <div className="p-6 sm:p-8">
+      <div className="mt-8 rounded-[24px] border border-black/5 bg-white p-6 shadow-sm sm:p-8">
           <h1 className="text-2xl font-bold text-[#1f2937] sm:text-3xl">{work.title}</h1>
 
           <div className="mt-6 space-y-4 text-sm leading-7 text-black/70">
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#4c5d87]">概要</p>
-              <p className="mt-2">{work.summary}</p>
+              <p className="text-sm font-semibold uppercase tracking-[0.24em] text-[#4c5d87]">概要</p>
+              <p className="mt-2 pl-4">{work.summary}</p>
             </div>
 
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#4c5d87]">URL</p>
-              <ul className="mt-2 space-y-2">
+              <p className="text-sm font-semibold uppercase tracking-[0.24em] text-[#4c5d87]">URL</p>
+              <ul className="mt-2 space-y-2 pl-4">
                 {work.links.map((link, index) => (
                   <li key={`${work.slug}-url-${index}`}>
                     {link.href ? (
@@ -182,34 +181,33 @@ export default async function WorkDetailPage({
             </div>
 
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#4c5d87]">開発期間</p>
-              <p className="mt-2">{work.period}</p>
+              <p className="text-sm font-semibold uppercase tracking-[0.24em] text-[#4c5d87]">開発期間</p>
+              <p className="mt-2 pl-4">{work.period}</p>
             </div>
 
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#4c5d87]">開発人数 / 担当</p>
-              <p className="mt-2">{work.role}</p>
+              <p className="text-sm font-semibold uppercase tracking-[0.24em] text-[#4c5d87]">開発人数 / 担当</p>
+              <p className="mt-2 pl-4">{work.role}</p>
             </div>
 
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#4c5d87]">使用技術</p>
-              <p className="mt-2">{work.tech}</p>
+              <p className="text-sm font-semibold uppercase tracking-[0.24em] text-[#4c5d87]">使用技術</p>
+              <p className="mt-2 pl-4">{work.tech}</p>
             </div>
 
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#4c5d87]">工夫点</p>
-              <p className="mt-2">{work.points}</p>
+              <p className="text-sm font-semibold uppercase tracking-[0.24em] text-[#4c5d87]">工夫点</p>
+              <p className="mt-2 pl-4">{work.points}</p>
             </div>
           </div>
 
-          <div className="mt-8">
-            <Link
-              href="/#works"
-              className="text-sm font-semibold text-[#4c5d87] underline-offset-4 hover:underline"
-            >
-              ← TOPの作品セクションへ戻る
-            </Link>
-          </div>
+        <div className="mt-8">
+          <Link
+            href="/#works"
+            className="text-sm font-semibold text-[#4c5d87] underline-offset-4 hover:underline"
+          >
+            ← TOPの作品セクションへ戻る
+          </Link>
         </div>
       </div>
     </main>
