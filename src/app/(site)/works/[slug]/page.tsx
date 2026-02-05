@@ -79,11 +79,14 @@ const works: Work[] = [
     tech: "TypeScript(Next.js)/Java(SpringBoot)/PostgreSQL",
     points:
       "UI設計では、モダンなデザインを意識し、カードレイアウトやグラフ表示を取り入れることで、視覚的なわかりやすさと情報の整理性を重視しました。また、GitHub APIを活用して外部データを取得・表示する機能を実装し、さらにGemini APIを連携させることで高度な情報処理にも対応できる拡張性のある構成としました。",
-    links: [
-      { label: "GitHub(frontend)", href: "https://github.com/Sachika1102/spz-hackathon-frontend" },
-      { label: "GitHub(backend)", href: "https://github.com/PlasticPlactice/spz-hackathon-backend" },
-      { label: "発表スライド", href: "" },
-    ],
+      links: [
+        { label: "GitHub(frontend)", href: "https://github.com/Sachika1102/spz-hackathon-frontend" },
+        { label: "GitHub(backend)", href: "https://github.com/PlasticPlactice/spz-hackathon-backend" },
+        {
+          label: "発表スライド",
+          href: "https://docs.google.com/presentation/d/1g6dl7G71yySoC1KYk5If3q4X7cxur0gP/edit?usp=sharing&ouid=106470278753277515963&rtpof=true&sd=true",
+        },
+      ],
   },
   {
     slug: "hackidea",
@@ -94,11 +97,14 @@ const works: Work[] = [
     tech: "TypeScript(Next.js)/Python(FastAPI)/PostgreSQL",
     points:
       "デザイン面ではモダンさと実用性を両立させるため、モバイルファーストを意識したUI設計を採用しました。配色はトレンド性の高いパープル系を基調とし、透明感のあるガラス風デザイン（Glassmorphism）を取り入れることで、スタイリッシュで洗練された世界観を演出しています。",
-    links: [
-      { label: "GitHub(frontend)", href: "https://github.com/HackIdea/hackidea-frontend" },
-      { label: "GitHub(backend)", href: "https://github.com/HackIdea/hackidea-backend" },
-      { label: "発表スライド", href: "" },
-    ],
+      links: [
+        { label: "GitHub(frontend)", href: "https://github.com/HackIdea/hackidea-frontend" },
+        { label: "GitHub(backend)", href: "https://github.com/HackIdea/hackidea-backend" },
+        {
+          label: "発表スライド",
+          href: "https://docs.google.com/presentation/d/1wNi4fLSL8-lp4JE7F0IANZwZY5RxgaYok8QkW1ChzJo/edit?usp=sharing",
+        },
+      ],
   },
 ];
 
