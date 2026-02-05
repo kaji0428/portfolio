@@ -1,4 +1,4 @@
-export default function AboutPage() {
+﻿export default function AboutPage() {
   return (
     <main className="wafuu-pattern relative overflow-hidden bg-[#f7f5ef]">
       <div className="pointer-events-none absolute inset-0 opacity-50">
@@ -27,8 +27,33 @@ export default function AboutPage() {
               私について
             </h1>
             <p className="text-base leading-8 text-black/70">
-              ここに自己紹介文を入れます。ものづくりに向き合う姿勢、学生時代に取り組んだこと、
-              これから挑戦していきたい領域を、読みやすい温度感でまとめる想定です。
+              <span className="font-semibold text-[#2f3e5c]">野月平快士</span>
+              と申します。私は、
+              <span className="font-semibold text-[#2f3e5c]">
+                「人の心に寄り添いながら価値を形にすること」
+              </span>
+              を軸にものづくりに取り組むエンジニアです。
+              <span className="font-semibold text-[#2f3e5c]">
+                私の強みは感受性・対話力・行動力・適応力の4つ
+              </span>
+              です。地元・岩手で自然と向き合いながら育んだまなざし、漫画や日常の出来事から受け取ってきた感情の細かな動き、そして多様な環境での経験が、私の発想と姿勢の土台になっています。
+              <span className="font-semibold text-[#2f3e5c]">SEとしてのアルバイト</span>
+              ではサイト改修に携わり、テレビ企業での映像編集・ブログ運用、コンビニでの接客業務では、相手にとって何が
+              <span className="font-semibold text-[#2f3e5c]">“心地よい体験”</span>
+              なのかを考え続ける習慣が鍛えられました。さらに、学校での企業連携では、クライアントと直接対話しながら企画・提案・制作を行い、現場で使われる視点と、責任を持って形にする実践力を磨きました。
+              加えて、学校内外でのハッカソンにも積極的に参加してきました。初めて会うメンバーと短期間でチームを組み、アイデア出しから設計、デザイン、実装までを一貫して進める中で、役割を固定せず
+              <span className="font-semibold text-[#2f3e5c]">“必要なところに自分を置く力”</span>
+              が育ちました。互いの強みを引き出し合いながら形にしていく過程で、プロジェクトの推進に関わる柔軟性と、前に進ませるための対話力が強化されました。
+              また私は、
+              <span className="font-semibold text-[#2f3e5c]">AIやUI/UX、開発技術の最新情報</span>
+              を日々キャッチアップし、興味を持ったものはすぐに手を動かして試すことを習慣としています。技術を知識として蓄えるだけではなく、
+              <span className="font-semibold text-[#2f3e5c]">「人の体験をどう良くできるか」</span>
+              という視点で応用し、実際の企画やアウトプットに反映しています。
+              私は単に技術を学ぶのではなく、
+              <span className="font-semibold text-[#2f3e5c]">
+                “人にとって意味のある価値を生み出せる、対話のできるエンジニア”
+              </span>
+              でありたいと考えています。
             </p>
           </div>
         </div>
@@ -41,12 +66,52 @@ export default function AboutPage() {
               origin of my sensibility
             </p>
             <h2 className="mt-3 text-2xl font-bold text-[#1f2937]">感性の原点</h2>
-            <p className="mt-4 text-sm leading-7 text-black/70">
-              自然の静けさや日本建築の構造美、紙の手触りや影の落ち方など、
-              身の回りの「静かな美しさ」に惹かれてきました。視線の流れや余白の心地よさを大切にし、
-              情報が整理されていく瞬間に喜びを感じます。
-            </p>
-          </div>
+              <div className="mt-4 space-y-4 text-sm leading-7 text-black/70">
+                <p>
+                  ─ いろいろな “感情の景色” を受け取り続けてきた人間として
+                </p>
+                <p>
+                  私の創造力は、ひとつの体験だけで成り立っているわけではありません。漫画、音楽、写真、会話、
+                  季節の匂い──さまざまな「心が揺れた瞬間」を丁寧に受け取ってきたことが、今の私を形づくっています。
+                </p>
+                <p>
+                  漫画は、登場人物の感情の機微や人間関係の距離感から、「人はどうして心が動くのか」を考えるきっかけになりました。
+                  言葉にできない感情や、それぞれの“葛藤”が物語の中で解けていく瞬間に、私はいつも深い共感を覚えます。
+                </p>
+                <p>
+                  音楽は、情景と感情をつなぐ“空気”のような存在です。歌詞だけではなく、音の質感、余白、テンポの揺らぎ……
+                  心の形に寄り添って変化する音楽に触れることで、「同じものでも、受け取る人や状況で意味が変わる」ということを学びました。
+                </p>
+                <p>
+                  写真は、そうした心の動きをそっと掬い上げる手段として機能しています。写真そのものが中心なのではなく、
+                  “感じ取ったものを残しておける場所が欲しかった”というのが本当の動機です。
+                </p>
+                <p>
+                  これらは全て、私の中で「世界をどう見るか」という軸へと統合されました。
+                </p>
+                <p>私が持っている“世界観”</p>
+                <p>
+                  感情には形はないけれど、確かにそこに存在している
+                  <br />
+                  心が動く瞬間は、いつだって日常の中に潜んでいる
+                  <br />
+                  小さな変化に気づけることが、思いやりやデザインに繋がる
+                </p>
+                <p>
+                  私はその“見えないもの”を大切にしたいと考えています。だからこそ、UIのわずかな余白、ボタンの動き方、
+                  言葉の語尾、チームミーティングで誰かが少し言い淀んだ瞬間──そういった細部に宿る“気持ち”を置き去りにしない
+                  ものづくりを心がけています。
+                </p>
+                <p>
+                  これが、私にしか作れないデザイン・発想へつながっている。複数の文化・体験からインスピレーションを受け、
+                  それを自分の中で「ひとつの感性」として統合できていること。これは、知識や技術だけでは身につかない、
+                  生きてきた時間が生み出した世界観そのものです。
+                </p>
+                <p>
+                  そしてそれは、AIには生み出せない“人としての感性の積層”だと感じています。
+                </p>
+              </div>
+            </div>
 
         </div>
       </section>
@@ -163,35 +228,35 @@ export default function AboutPage() {
             <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#4c5d87]">
               code & build
             </p>
-            <h3 className="mt-2 text-lg font-bold text-[#1f2937]">マークアップ</h3>
+              <h3 className="mt-2 text-lg font-bold text-[#1f2937]">開発言語</h3>
             <div className="mt-5 space-y-4">
               <div>
                 <div className="flex items-center justify-between text-xs font-semibold text-[#2f3e5c]">
-                  <span>HTML/CSS</span>
-                  <span>85%</span>
+                    <span>JavaScript</span>
+                    <span>80%</span>
+                  </div>
+                  <div className="mt-2 h-2 rounded-full bg-[#e3e6ee]">
+                    <div className="h-2 rounded-full bg-[#2f3e5c]" style={{ width: "80%" }} />
+                  </div>
                 </div>
-                <div className="mt-2 h-2 rounded-full bg-[#e3e6ee]">
-                  <div className="h-2 rounded-full bg-[#2f3e5c]" style={{ width: "85%" }} />
+                <div>
+                  <div className="flex items-center justify-between text-xs font-semibold text-[#2f3e5c]">
+                    <span>Java</span>
+                    <span>60%</span>
+                  </div>
+                  <div className="mt-2 h-2 rounded-full bg-[#e3e6ee]">
+                    <div className="h-2 rounded-full bg-[#2f3e5c]" style={{ width: "60%" }} />
+                  </div>
                 </div>
-              </div>
-              <div>
-                <div className="flex items-center justify-between text-xs font-semibold text-[#2f3e5c]">
-                  <span>JavaScript</span>
-                  <span>70%</span>
+                <div>
+                  <div className="flex items-center justify-between text-xs font-semibold text-[#2f3e5c]">
+                    <span>PHP</span>
+                    <span>70%</span>
+                  </div>
+                  <div className="mt-2 h-2 rounded-full bg-[#e3e6ee]">
+                    <div className="h-2 rounded-full bg-[#2f3e5c]" style={{ width: "70%" }} />
+                  </div>
                 </div>
-                <div className="mt-2 h-2 rounded-full bg-[#e3e6ee]">
-                  <div className="h-2 rounded-full bg-[#2f3e5c]" style={{ width: "70%" }} />
-                </div>
-              </div>
-              <div>
-                <div className="flex items-center justify-between text-xs font-semibold text-[#2f3e5c]">
-                  <span>Next.js</span>
-                  <span>65%</span>
-                </div>
-                <div className="mt-2 h-2 rounded-full bg-[#e3e6ee]">
-                  <div className="h-2 rounded-full bg-[#2f3e5c]" style={{ width: "65%" }} />
-                </div>
-              </div>
             </div>
           </div>
 
@@ -277,3 +342,4 @@ export default function AboutPage() {
     </main>
   );
 }
+

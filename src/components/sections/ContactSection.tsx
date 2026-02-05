@@ -1,4 +1,21 @@
-﻿export default function ContactSection() {
+﻿"use client";
+
+import { useState } from "react";
+
+const EMAIL = "k.notsukitaira.sys23@morijyobi.ac.jp";
+
+export default function ContactSection() {
+  const [copied, setCopied] = useState(false);
+
+  const handleCopy = async () => {
+    try {
+      await navigator.clipboard.writeText(EMAIL);
+      setCopied(true);
+      window.setTimeout(() => setCopied(false), 1800);
+    } catch {
+      setCopied(false);
+    }
+  };
   return (
     <section
       id="contact"
@@ -30,12 +47,20 @@
 
             <div className="mt-2 rounded-2xl border border-[#b79b5b]/35 bg-[#b79b5b]/10 p-5">
               <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#6b5630]">email</p>
-              <p className="mt-1 text-base font-bold text-[#6b5630]">k.notsukitaira.sys23@morijyobi.ac.jp</p>
+              <div className="mt-1 flex flex-wrap items-center gap-3">
+                <p className="text-base font-bold text-[#6b5630]">{EMAIL}</p>
+                <button
+                  type="button"
+                  onClick={handleCopy}
+                  className="rounded-full border border-[#6b5630]/35 bg-white/70 px-4 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-[#6b5630] transition hover:bg-white"
+                  aria-live="polite"
+                >
+                  {copied ? "copied" : "copy"}
+                </button>
+              </div>
             </div>
 
             <div className="grid gap-2 rounded-2xl border border-black/5 bg-[#f7f5ef] p-4 text-sm text-black/70 sm:grid-cols-3">
-              <p>対応: Webデザイン / マークアップ</p>
-              <p>返信: 2〜4営業日以内</p>
               <p>形式: テキストでOKです</p>
             </div>
           </div>
@@ -54,3 +79,4 @@
     </section>
   );
 }
+

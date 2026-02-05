@@ -20,10 +20,10 @@
           </div>
 
           <div className="px-1">
-            <p className="text-sm font-semibold text-[#2f3e5c]">自己紹介（仮）</p>
+            <p className="text-sm font-semibold text-[#2f3e5c]">自己紹介</p>
             <p className="mt-3 text-sm leading-7 text-black/70">
-              ここにプロフィール写真の説明や自己紹介文が入ります。就活向けに、得意なこと・取り組み方・
-              強みが伝わる文章に差し替える想定で、いまは読みやすい密度だけ整えています。
+              私の名前は野月平快士です。盛岡情報ビジネス専門学校高度情報工学科3年生です。
+              主にweb開発やUIUXについて日々勉強をしています。
             </p>
           </div>
 
@@ -50,9 +50,9 @@
 
           <div className="rounded-[28px] border border-[#2f3e5c]/12 bg-white p-6 shadow-sm">
             <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#4c5d87]">Code & Build</p>
-            <h3 className="mt-2 text-lg font-bold text-[#1f2937]">マークアップ</h3>
+            <h3 className="mt-2 text-lg font-bold text-[#1f2937]">開発言語</h3>
             <p className="mt-2 text-sm leading-7 text-black/70">
-              HTML/CSSを中心に、あとから読み返しても意図が分かる構造と命名を意識して実装します。
+              主にJavaScriptなどのフロントエンドを学んでいます。ほかにもWeb開発言語を幅広く学習中です。
             </p>
           </div>
 
