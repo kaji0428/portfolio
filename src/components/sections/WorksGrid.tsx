@@ -1,7 +1,11 @@
-﻿type Work = {
+import Image from "next/image";
+
+type Work = {
   slug: string;
   title: string;
   description: string;
+  image?: string;
+  imageAlt?: string;
 };
 
 const works: Work[] = [
@@ -9,31 +13,43 @@ const works: Work[] = [
     slug: "chrono-voice",
     title: "ChronoVoice",
     description: "ToDo管理カレンダーアプリ（校内ハッカソン）",
+    image: "/images/chro.png",
+    imageAlt: "ChronoVoiceの画面",
   },
   {
     slug: "web-design",
     title: "webサイトデザイン作成",
     description: "企業連携でのWebサイトデザイン制作",
+    image: "/images/wain.png",
+    imageAlt: "Webサイトデザインの画面",
   },
   {
     slug: "advice-app",
     title: "格言アドバイスアプリ",
     description: "Advice API / Deepl API 連携アプリ",
+    image: "/images/profile/kakugen.png",
+    imageAlt: "格言アドバイスアプリの画面",
   },
   {
     slug: "cookgod",
     title: "CookGOD",
     description: "レシピ管理アプリ（Spring Boot）",
+    image: "/images/cook.png",
+    imageAlt: "CookGODの画面",
   },
   {
     slug: "commitscope",
     title: "CommitScope",
     description: "GitHub分析管理アプリ（サポーターズ様）",
+    image: "/images/team.png",
+    imageAlt: "CommitScopeの画面",
   },
   {
     slug: "hackidea",
     title: "HackIdea",
     description: "ハッカソンのアイデア提案と掲示板アプリ",
+    image: "/images/idea.png",
+    imageAlt: "HackIdeaの画面",
   },
 ];
 
@@ -65,17 +81,29 @@ export default function WorksGrid() {
                 href={`/works/${work.slug}`}
                 className="group flex h-full flex-col gap-4 rounded-[28px] border border-[#2f3e5c]/10 bg-white p-5 shadow-sm transition hover:-translate-y-1 hover:border-[#2f3e5c]/20"
               >
-                <div
-                  className="aspect-[16/10] w-full rounded-2xl border border-black/5"
-                  style={{
-                    backgroundImage:
-                      index % 3 === 0
-                        ? "linear-gradient(135deg, #cfd8ee 0%, #f7f5ef 55%, #e9e2cf 100%)"
-                        : index % 3 === 1
-                          ? "linear-gradient(135deg, #e9e2cf 0%, #f7f5ef 55%, #dfe6f5 100%)"
-                          : "linear-gradient(135deg, #dfe6f5 0%, #f7f5ef 55%, #cfd8ee 100%)",
-                  }}
-                />
+                <div className="relative aspect-[16/10] w-full overflow-hidden rounded-2xl border border-black/5">
+                  {work.image ? (
+                    <Image
+                      src={work.image}
+                      alt={work.imageAlt ?? work.title}
+                      fill
+                      className="object-cover"
+                      sizes="(min-width: 1024px) 320px, (min-width: 640px) 45vw, 90vw"
+                    />
+                  ) : (
+                    <div
+                      className="h-full w-full"
+                      style={{
+                        backgroundImage:
+                          index % 3 === 0
+                            ? "linear-gradient(135deg, #cfd8ee 0%, #f7f5ef 55%, #e9e2cf 100%)"
+                            : index % 3 === 1
+                              ? "linear-gradient(135deg, #e9e2cf 0%, #f7f5ef 55%, #dfe6f5 100%)"
+                              : "linear-gradient(135deg, #dfe6f5 0%, #f7f5ef 55%, #cfd8ee 100%)",
+                      }}
+                    />
+                  )}
+                </div>
                 <div className="flex flex-1 flex-col gap-2">
                   <h3 className="text-lg font-semibold text-[#1f2937] transition group-hover:text-[#2f3e5c]">
                     {work.title}

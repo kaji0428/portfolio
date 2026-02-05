@@ -1,4 +1,5 @@
-﻿import Link from "next/link";
+import Image from "next/image";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 
 type WorkLink = { label: string; href: string };
@@ -12,6 +13,8 @@ type Work = {
   tech: string;
   points: string;
   links: WorkLink[];
+  image?: string;
+  imageAlt?: string;
 };
 
 const works: Work[] = [
@@ -40,7 +43,14 @@ const works: Work[] = [
     tech: "figma",
     points:
       "既存サイトの課題を分析し、「直感的に操作できる導線設計」と「一目で内容が伝わるデザイン」を徹底して改善しました。特に遷移のしやすさに重点を置き、ユーザーが迷わず目的の情報へ到達できる構成を実現しています。また、サイト全体の世界観やメッセージ性も大切にし、視覚的な統一感と情報の伝達性を両立させました。チームではリーダーを務め、開発スケジュールの管理や進捗の調整を行い、期限内での成果物完成に貢献しました。さらに企業担当者の方との連絡や要件整理も担当し、プロジェクトを円滑に推進する役割を果たしました。",
-    links: [{ label: "figma / デザインLink", href: "" }],
+    links: [
+      {
+        label: "figma / デザインLink",
+        href: "https://www.figma.com/design/vrQsUSDFaKRyXYeOQN5m2S/%E6%8F%90%E5%87%BA?node-id=134-445&p=f",
+      },
+    ],
+    image: "/images/wain.png",
+    imageAlt: "Webサイトデザインの画面",
   },
   {
     slug: "advice-app",
@@ -55,6 +65,8 @@ const works: Work[] = [
       { label: "GitHub", href: "https://github.com/kaji0428/deepl-proxy" },
       { label: "デモ", href: "https://deepl-proxy-nine.vercel.app/" },
     ],
+    image: "/images/profile/kakugen.png",
+    imageAlt: "格言アドバイスアプリの画面",
   },
   {
     slug: "cookgod",
@@ -79,14 +91,16 @@ const works: Work[] = [
     tech: "TypeScript(Next.js)/Java(SpringBoot)/PostgreSQL",
     points:
       "UI設計では、モダンなデザインを意識し、カードレイアウトやグラフ表示を取り入れることで、視覚的なわかりやすさと情報の整理性を重視しました。また、GitHub APIを活用して外部データを取得・表示する機能を実装し、さらにGemini APIを連携させることで高度な情報処理にも対応できる拡張性のある構成としました。",
-      links: [
-        { label: "GitHub(frontend)", href: "https://github.com/Sachika1102/spz-hackathon-frontend" },
-        { label: "GitHub(backend)", href: "https://github.com/PlasticPlactice/spz-hackathon-backend" },
-        {
-          label: "発表スライド",
-          href: "https://docs.google.com/presentation/d/1g6dl7G71yySoC1KYk5If3q4X7cxur0gP/edit?usp=sharing&ouid=106470278753277515963&rtpof=true&sd=true",
-        },
-      ],
+    links: [
+      { label: "GitHub(frontend)", href: "https://github.com/Sachika1102/spz-hackathon-frontend" },
+      { label: "GitHub(backend)", href: "https://github.com/PlasticPlactice/spz-hackathon-backend" },
+      {
+        label: "発表スライド",
+        href: "https://docs.google.com/presentation/d/1g6dl7G71yySoC1KYk5If3q4X7cxur0gP/edit?usp=sharing&ouid=106470278753277515963&rtpof=true&sd=true",
+      },
+    ],
+    image: "/images/team.png",
+    imageAlt: "CommitScopeの画面",
   },
   {
     slug: "hackidea",
@@ -97,14 +111,16 @@ const works: Work[] = [
     tech: "TypeScript(Next.js)/Python(FastAPI)/PostgreSQL",
     points:
       "デザイン面ではモダンさと実用性を両立させるため、モバイルファーストを意識したUI設計を採用しました。配色はトレンド性の高いパープル系を基調とし、透明感のあるガラス風デザイン（Glassmorphism）を取り入れることで、スタイリッシュで洗練された世界観を演出しています。",
-      links: [
-        { label: "GitHub(frontend)", href: "https://github.com/HackIdea/hackidea-frontend" },
-        { label: "GitHub(backend)", href: "https://github.com/HackIdea/hackidea-backend" },
-        {
-          label: "発表スライド",
-          href: "https://docs.google.com/presentation/d/1wNi4fLSL8-lp4JE7F0IANZwZY5RxgaYok8QkW1ChzJo/edit?usp=sharing",
-        },
-      ],
+    links: [
+      { label: "GitHub(frontend)", href: "https://github.com/HackIdea/hackidea-frontend" },
+      { label: "GitHub(backend)", href: "https://github.com/HackIdea/hackidea-backend" },
+      {
+        label: "発表スライド",
+        href: "https://docs.google.com/presentation/d/1wNi4fLSL8-lp4JE7F0IANZwZY5RxgaYok8QkW1ChzJo/edit?usp=sharing",
+      },
+    ],
+    image: "/images/idea.png",
+    imageAlt: "HackIdeaの画面",
   },
 ];
 
@@ -150,23 +166,33 @@ export default async function WorkDetailPage({
               allowFullScreen
             />
           </div>
+        ) : work.image ? (
+          <div className="relative aspect-video w-full overflow-hidden rounded-[24px] border border-black/5 bg-white shadow-sm">
+            <Image
+              src={work.image}
+              alt={work.imageAlt ?? work.title}
+              fill
+              className="object-cover"
+              sizes="(min-width: 1024px) 896px, (min-width: 640px) 90vw, 100vw"
+            />
+          </div>
         ) : (
           <div className="aspect-video w-full overflow-hidden rounded-[24px] border border-black/5 bg-[linear-gradient(135deg,#dfe6f5_0%,#f7f5ef_55%,#e9e2cf_100%)] shadow-sm" />
         )}
       </div>
 
       <div className="mt-8 rounded-[24px] border border-black/5 bg-white p-6 shadow-sm sm:p-8">
-          <h1 className="text-2xl font-bold text-[#1f2937] sm:text-3xl">{work.title}</h1>
+        <h1 className="text-2xl font-bold text-[#1f2937] sm:text-3xl">{work.title}</h1>
 
-          <div className="mt-6 space-y-4 text-sm leading-7 text-black/70">
-            <div>
-              <p className="text-sm font-semibold uppercase tracking-[0.24em] text-[#4c5d87]">概要</p>
-              <p className="mt-2 pl-4">{work.summary}</p>
-            </div>
+        <div className="mt-6 space-y-4 text-sm leading-7 text-black/70">
+          <div>
+            <p className="text-sm font-semibold uppercase tracking-[0.24em] text-[#4c5d87]">概要</p>
+            <p className="mt-2 pl-4">{work.summary}</p>
+          </div>
 
-            <div>
-              <p className="text-sm font-semibold uppercase tracking-[0.24em] text-[#4c5d87]">URL</p>
-              <ul className="mt-2 space-y-2 pl-4">
+          <div>
+            <p className="text-sm font-semibold uppercase tracking-[0.24em] text-[#4c5d87]">URL</p>
+            <ul className="mt-2 space-y-2 pl-4">
               {work.links.map((link, index) => (
                 <li key={`${work.slug}-url-${index}`} className="flex flex-wrap items-baseline gap-2">
                   {link.href ? (
@@ -186,29 +212,29 @@ export default async function WorkDetailPage({
                   )}
                 </li>
               ))}
-              </ul>
-            </div>
-
-            <div>
-              <p className="text-sm font-semibold uppercase tracking-[0.24em] text-[#4c5d87]">開発期間</p>
-              <p className="mt-2 pl-4">{work.period}</p>
-            </div>
-
-            <div>
-              <p className="text-sm font-semibold uppercase tracking-[0.24em] text-[#4c5d87]">開発人数 / 担当</p>
-              <p className="mt-2 pl-4">{work.role}</p>
-            </div>
-
-            <div>
-              <p className="text-sm font-semibold uppercase tracking-[0.24em] text-[#4c5d87]">使用技術</p>
-              <p className="mt-2 pl-4">{work.tech}</p>
-            </div>
-
-            <div>
-              <p className="text-sm font-semibold uppercase tracking-[0.24em] text-[#4c5d87]">工夫点</p>
-              <p className="mt-2 pl-4">{work.points}</p>
-            </div>
+            </ul>
           </div>
+
+          <div>
+            <p className="text-sm font-semibold uppercase tracking-[0.24em] text-[#4c5d87]">開発期間</p>
+            <p className="mt-2 pl-4">{work.period}</p>
+          </div>
+
+          <div>
+            <p className="text-sm font-semibold uppercase tracking-[0.24em] text-[#4c5d87]">開発人数 / 担当</p>
+            <p className="mt-2 pl-4">{work.role}</p>
+          </div>
+
+          <div>
+            <p className="text-sm font-semibold uppercase tracking-[0.24em] text-[#4c5d87]">使用技術</p>
+            <p className="mt-2 pl-4">{work.tech}</p>
+          </div>
+
+          <div>
+            <p className="text-sm font-semibold uppercase tracking-[0.24em] text-[#4c5d87]">工夫点</p>
+            <p className="mt-2 pl-4">{work.points}</p>
+          </div>
+        </div>
 
         <div className="mt-8">
           <Link
