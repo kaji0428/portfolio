@@ -18,7 +18,7 @@ export default function NewsList() {
           <p className="text-sm font-semibold uppercase tracking-[0.28em] text-[#4c5d87]">news</p>
           <h2 className="text-3xl font-bold text-[#1f2937] sm:text-4xl">お知らせ</h2>
           <p className="max-w-3xl text-base leading-8 text-black/70">
-            更新情報を軽く残しておくと、サイトが育っていることが伝わります（不要なら後で外せます）。
+            更新情報を軽く残しておくと、サイトが育っていることが伝わります。
           </p>
         </div>
 
