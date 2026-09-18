@@ -1,4 +1,6 @@
-﻿export default function AboutTeaser() {
+﻿import Image from "next/image";
+
+export default function AboutTeaser() {
   return (
     <section id="about" className="wafuu-pattern relative overflow-hidden bg-white">
       <div className="pointer-events-none absolute inset-0 opacity-40">
@@ -15,8 +17,14 @@
             <h2 className="text-3xl font-bold text-[#1f2937] sm:text-4xl">私について</h2>
           </div>
 
-          <div className="overflow-hidden rounded-[28px] border border-black/5 bg-white shadow-sm">
-            <div className="aspect-[16/10] w-full bg-[linear-gradient(135deg,#dfe6f5_0%,#f7f5ef_45%,#e9e2cf_100%)]" />
+          <div className="relative aspect-[16/10] w-full overflow-hidden rounded-[28px] border border-black/5 bg-white shadow-sm">
+            <Image
+              src="/images/my.jpg"
+              alt="野月平快士の写真"
+              fill
+              className="object-cover"
+              sizes="(min-width: 768px) 480px, 90vw"
+            />
           </div>
 
           <div className="px-1">
@@ -27,14 +35,6 @@
             </p>
           </div>
 
-          <div>
-            <a
-              href="/about"
-              className="inline-flex items-center rounded-full border border-[#2f3e5c]/20 bg-white px-6 py-3 text-sm font-semibold text-[#2f3e5c] transition hover:border-[#2f3e5c]/40"
-            >
-              もっと詳しく見る
-            </a>
-          </div>
         </div>
 
         <div className="flex flex-col gap-5">
