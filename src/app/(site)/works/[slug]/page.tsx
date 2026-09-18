@@ -145,6 +145,24 @@ const works: Work[] = [
     image: "/images/works/zou&hana.png",
     imageAlt: "象と花プロジェクトの画面",
   },
+  {
+    slug: "musicvault",
+    title: "MusicVault",
+    summary: "学校の後輩とアジャイル開発で制作した音楽管理アプリ",
+    period: "2026/7〜2026/8",
+    role: "7人開発 / PM",
+    tech: "HTML/CSS（Monacaエディタ使用）",
+    points:
+      "PMとして開発全体をまとめ、メンバーの作業内容の確認や、後輩への指導を兼ねたペアプログラミングを一時的に行いながら、チームが円滑に開発を進められるよう努めました。実用性を重視し、既存の音楽アプリから発想を得て機能を検討する一方、後輩の想像力豊かなアイデアによるモード変更機能を採用したことで、より面白く楽しみながら開発を進めることができました。",
+    links: [
+      {
+        label: "デモ",
+        href: "https://direct-preview-6a2b56d2e78885f61c6cbd4b.monaca.education",
+      },
+    ],
+    image: "/images/MusicVault.png",
+    imageAlt: "MusicVaultの画面",
+  },
 ];
 
 function extractYouTubeId(url: string) {

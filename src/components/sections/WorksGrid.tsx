@@ -58,6 +58,13 @@ const works: Work[] = [
     image: "/images/works/zou&hana.png",
     imageAlt: "象と花プロジェクトの画面",
   },
+  {
+    slug: "musicvault",
+    title: "MusicVault",
+    description: "後輩とアジャイル開発した音楽管理アプリ",
+    image: "/images/MusicVault.png",
+    imageAlt: "MusicVaultの画面",
+  },
 ];
 
 export default function WorksGrid() {
