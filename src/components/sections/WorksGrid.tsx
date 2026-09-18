@@ -18,7 +18,7 @@ const works: Work[] = [
   },
   {
     slug: "web-design",
-    title: "webサイトデザイン作成",
+    title: "エーデルワインサポートwebサイト",
     description: "企業連携でのWebサイトデザイン制作",
     image: "/images/wain.png",
     imageAlt: "Webサイトデザインの画面",
