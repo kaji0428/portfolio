@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 
 type WorkLink = { label: string; href: string };
+type WorkAccount = { label: string; id: string; password: string };
 
 type Work = {
   slug: string;
@@ -13,6 +14,7 @@ type Work = {
   tech: string;
   points: string;
   links: WorkLink[];
+  accounts?: WorkAccount[];
   image?: string;
   imageAlt?: string;
 };
@@ -122,6 +124,27 @@ const works: Work[] = [
     image: "/images/idea.png",
     imageAlt: "HackIdeaの画面",
   },
+  {
+    slug: "elephant-and-flower",
+    title: "象と花プロジェクト",
+    summary: "さわや書店の「文庫X」というイベントをDX化する企業連携で制作したファンサイト",
+    period: "2025/10〜2026/2",
+    role: "4人開発 / ワイヤーフレーム、画面デザイン、フロントエンド",
+    tech: "TypeScript(Next.js)/Docker/PostgreSQL",
+    points:
+      "企業担当者の方に背景や目的をヒアリングし、本棚をモチーフにしたデザインを取り入れることで、本が好きなユーザーがより親しみやすく、手軽に楽しめるサイトになるよう意識しました。",
+    links: [
+      { label: "ファンサイト", href: "https://www.morijyobi.net:8082/" },
+      { label: "アカウント登録", href: "https://www.morijyobi.net:8082/poster/create" },
+      { label: "管理者ログイン", href: "https://www.morijyobi.net:8082/admin" },
+    ],
+    accounts: [
+      { label: "ユーザー", id: "0000000000", password: "pass@000" },
+      { label: "管理者（メールアドレス）", id: "admin@example.com", password: "pass@000" },
+    ],
+    image: "/images/works/zou&hana.png",
+    imageAlt: "象と花プロジェクトの画面",
+  },
 ];
 
 function extractYouTubeId(url: string) {
@@ -214,6 +237,24 @@ export default async function WorkDetailPage({
               ))}
             </ul>
           </div>
+
+          {work.accounts ? (
+            <div>
+              <p className="text-sm font-semibold uppercase tracking-[0.24em] text-[#4c5d87]">
+                テスト用アカウント
+              </p>
+              <ul className="mt-2 space-y-2 pl-4">
+                {work.accounts.map((account, index) => (
+                  <li key={`${work.slug}-account-${index}`}>
+                    <span className="font-semibold text-[#1f2937]">{account.label}</span>
+                    <span className="ml-2 text-black/70">
+                      ID: {account.id} / PW: {account.password}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ) : null}
 
           <div>
             <p className="text-sm font-semibold uppercase tracking-[0.24em] text-[#4c5d87]">開発期間</p>

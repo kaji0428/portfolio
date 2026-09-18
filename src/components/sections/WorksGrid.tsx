@@ -51,6 +51,13 @@ const works: Work[] = [
     image: "/images/idea.png",
     imageAlt: "HackIdeaの画面",
   },
+  {
+    slug: "elephant-and-flower",
+    title: "象と花プロジェクト",
+    description: "さわや書店「文庫X」イベントをDX化する企業連携サイト",
+    image: "/images/works/zou&hana.png",
+    imageAlt: "象と花プロジェクトの画面",
+  },
 ];
 
 export default function WorksGrid() {
