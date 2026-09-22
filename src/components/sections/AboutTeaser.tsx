@@ -30,11 +30,19 @@ export default function AboutTeaser() {
           <div className="px-1">
             <p className="text-sm font-semibold text-[#2f3e5c]">自己紹介</p>
             <p className="mt-3 text-sm leading-7 text-black/70">
-              私の名前は野月平快士です。盛岡情報ビジネス専門学校高度情報工学科3年生です。
+              私の名前は野月平快士です。盛岡情報ビジネス専門学校高度情報工学科4年生です。
               主にweb開発やUIUXについて日々勉強をしています。
             </p>
           </div>
 
+          <div>
+            <a
+              href="/about"
+              className="inline-flex items-center rounded-full border border-[#2f3e5c]/20 bg-white px-6 py-3 text-sm font-semibold text-[#2f3e5c] transition hover:border-[#2f3e5c]/40"
+            >
+              もっと詳しく見る
+            </a>
+          </div>
         </div>
 
         <div className="flex flex-col gap-5">
