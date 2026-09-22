@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 const techStack = [
   {
     category: "フロントエンド",
@@ -60,18 +58,7 @@ export default function AboutPage() {
 
       {/* hero */}
       <section className="relative mx-auto w-full max-w-6xl px-4 pb-10 pt-6">
-        <div className="grid gap-6 lg:grid-cols-[0.9fr,1.1fr] lg:items-center">
-          <div className="relative aspect-[4/5] w-full max-w-sm overflow-hidden rounded-[28px] border border-black/5 bg-white shadow-sm lg:max-w-none">
-            <Image
-              src="/images/my.jpg"
-              alt="野月平快士の写真"
-              fill
-              className="object-cover"
-              sizes="(min-width: 1024px) 480px, 90vw"
-              priority
-            />
-          </div>
-
+        <div className="grid gap-6">
           <div className="flex flex-col gap-4">
             <p className="text-sm font-semibold uppercase tracking-[0.28em] text-[#4c5d87]">
               about me
