@@ -212,39 +212,42 @@ export default async function WorkDetailPage({
 
   return (
     <main className="mx-auto w-full max-w-6xl px-4 py-16">
-      <div className="relative mx-auto w-full max-w-4xl">
+      <div className="flex items-start gap-3">
         <Link
           href="/#works"
-          className="absolute left-3 top-3 z-10 inline-flex items-center gap-1 rounded-full border border-black/10 bg-white/90 px-3 py-1.5 text-sm font-semibold text-[#4c5d87] shadow-sm backdrop-blur transition hover:bg-white"
+          className="mt-1 inline-flex shrink-0 items-center gap-1 rounded-full border border-black/10 bg-white px-3 py-1.5 text-sm font-semibold text-[#4c5d87] shadow-sm transition hover:border-black/20"
         >
           ← 戻る
         </Link>
-        {youtubeId ? (
-          <div className="aspect-video w-full overflow-hidden rounded-[24px] border border-black/5 bg-white shadow-sm">
-            <iframe
-              className="h-full w-full"
-              src={`https://www.youtube.com/embed/${youtubeId}`}
-              title={work.title}
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            />
-          </div>
-        ) : work.image ? (
-          <div className="relative aspect-video w-full overflow-hidden rounded-[24px] border border-black/5 bg-white shadow-sm">
-            <Image
-              src={work.image}
-              alt={work.imageAlt ?? work.title}
-              fill
-              className="object-cover"
-              sizes="(min-width: 1024px) 896px, (min-width: 640px) 90vw, 100vw"
-            />
-          </div>
-        ) : (
-          <div className="aspect-video w-full overflow-hidden rounded-[24px] border border-black/5 bg-[linear-gradient(135deg,#dfe6f5_0%,#f7f5ef_55%,#e9e2cf_100%)] shadow-sm" />
-        )}
-      </div>
 
-      <div className="mt-8 rounded-[24px] border border-black/5 bg-white p-6 shadow-sm sm:p-8">
+        <div className="min-w-0 flex-1">
+          <div className="mx-auto w-full max-w-4xl">
+            {youtubeId ? (
+              <div className="aspect-video w-full overflow-hidden rounded-[24px] border border-black/5 bg-white shadow-sm">
+                <iframe
+                  className="h-full w-full"
+                  src={`https://www.youtube.com/embed/${youtubeId}`}
+                  title={work.title}
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                />
+              </div>
+            ) : work.image ? (
+              <div className="relative aspect-video w-full overflow-hidden rounded-[24px] border border-black/5 bg-white shadow-sm">
+                <Image
+                  src={work.image}
+                  alt={work.imageAlt ?? work.title}
+                  fill
+                  className="object-cover"
+                  sizes="(min-width: 1024px) 896px, (min-width: 640px) 90vw, 100vw"
+                />
+              </div>
+            ) : (
+              <div className="aspect-video w-full overflow-hidden rounded-[24px] border border-black/5 bg-[linear-gradient(135deg,#dfe6f5_0%,#f7f5ef_55%,#e9e2cf_100%)] shadow-sm" />
+            )}
+          </div>
+
+          <div className="mt-8 rounded-[24px] border border-black/5 bg-white p-6 shadow-sm sm:p-8">
         <h1 className="text-2xl font-bold text-[#1f2937] sm:text-3xl">{work.title}</h1>
 
         <div className="mt-6 space-y-4 text-sm leading-7 text-black/70">
@@ -317,14 +320,16 @@ export default async function WorkDetailPage({
           </div>
         </div>
 
-        <div className="mt-8">
-          <Link
-            href="/#works"
-            className="text-sm font-semibold text-[#4c5d87] underline-offset-4 hover:underline"
-          >
-            ← TOPの作品セクションへ戻る
-          </Link>
+          <div className="mt-8">
+            <Link
+              href="/#works"
+              className="text-sm font-semibold text-[#4c5d87] underline-offset-4 hover:underline"
+            >
+              ← TOPの作品セクションへ戻る
+            </Link>
+          </div>
         </div>
+      </div>
       </div>
     </main>
   );
