@@ -1,15 +1,23 @@
 "use client";
 
+import { useEffect, useState } from "react";
+
 export default function ScrollToTopButton() {
-  const handleClick = () => {
-    if (typeof window === "undefined") return;
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const update = () => setVisible(window.scrollY > 200);
+    update();
+    window.addEventListener("scroll", update, { passive: true });
+    return () => window.removeEventListener("scroll", update);
+  }, []);
+
+  if (!visible) return null;
 
   return (
     <button
       type="button"
-      onClick={handleClick}
+      onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
       aria-label="ページの先頭へ戻る"
       className="fixed bottom-6 right-6 z-50 flex h-12 w-12 items-center justify-center rounded-full border border-[#2f3e5c]/20 bg-[#2f3e5c] text-white shadow-lg transition hover:bg-[#1f2a44]"
     >
