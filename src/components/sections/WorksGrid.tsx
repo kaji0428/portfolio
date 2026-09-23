@@ -65,6 +65,11 @@ const works: Work[] = [
     image: "/images/MusicVault.png",
     imageAlt: "MusicVaultの画面",
   },
+  {
+    slug: "school-festival-dx",
+    title: "学園祭システムDX化",
+    description: "卒業制作として開発中の学園祭運営システムDX化",
+  },
 ];
 
 export default function WorksGrid() {

@@ -301,10 +301,7 @@ export default function AboutPage() {
         <p className="text-sm font-semibold uppercase tracking-[0.28em] text-[#4c5d87]">contact</p>
         <h2 className="mt-3 text-2xl font-bold text-[#1f2937]">連絡先</h2>
         <div className="mt-6 rounded-[28px] border border-[#2f3e5c]/12 bg-white p-7 shadow-sm sm:p-8">
-          <p className="text-sm leading-7 text-black/70">
-            ご連絡はメールが一番確実です。件名に「ポートフォリオの件」と入れていただけると見つけやすく助かります。
-          </p>
-          <div className="mt-4 inline-flex max-w-full rounded-2xl border border-[#b79b5b]/35 bg-[#b79b5b]/10 p-5">
+          <div className="inline-flex max-w-full rounded-2xl border border-[#b79b5b]/35 bg-[#b79b5b]/10 p-5">
             <a
               href={`mailto:${EMAIL}`}
               className="break-all text-sm font-bold text-[#6b5630] underline-offset-4 hover:underline"

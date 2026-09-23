@@ -163,6 +163,22 @@ const works: Work[] = [
     image: "/images/MusicVault.png",
     imageAlt: "MusicVaultの画面",
   },
+  {
+    slug: "school-festival-dx",
+    title: "学園祭システムDX化",
+    summary: "学校の卒業制作として開発中の学園祭運営システムDX化プロジェクト",
+    period: "2026/6〜",
+    role: "6人開発 / 画面設計、フロントエンド、バックエンド",
+    tech: "Figma(今後 Next.js / Spring Boot を使用予定)",
+    points:
+      "現在の課題や背景を洗い出すところから始め、そこから画面設計に取り掛かりました。メンバーそれぞれの視点から使いやすさを重視して検討し、画面設計ではコンポーネントを整備することで、今後の修正や追加への対応しやすさと開発効率を重視しました。",
+    links: [
+      {
+        label: "Figma / デザインLink",
+        href: "https://www.figma.com/design/9TM7wgjiVXSXN7IlLyDw7u/%E7%94%BB%E9%9D%A2%E8%A8%AD%E8%A8%88?node-id=0-1&t=0BDT2iT6jXXnYc6o-1",
+      },
+    ],
+  },
 ];
 
 function extractYouTubeId(url: string) {
@@ -197,6 +213,12 @@ export default async function WorkDetailPage({
   return (
     <main className="mx-auto w-full max-w-6xl px-4 py-16">
       <div className="mx-auto w-full max-w-4xl">
+        <Link
+          href="/#works"
+          className="mb-3 inline-flex items-center gap-1 text-sm font-semibold text-[#4c5d87] underline-offset-4 hover:underline"
+        >
+          ← 戻る
+        </Link>
         {youtubeId ? (
           <div className="aspect-video w-full overflow-hidden rounded-[24px] border border-black/5 bg-white shadow-sm">
             <iframe
