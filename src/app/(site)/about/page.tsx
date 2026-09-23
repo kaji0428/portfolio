@@ -44,7 +44,20 @@ const qualifications = [
   { date: "2026年8月〜", title: "応用情報技術者試験 受験に向け学習中" },
 ];
 
-const hobbies = ["筋トレ", "ギター", "旅行"];
+const hobbies = [
+  { title: "筋トレ", body: "ベンチプレス80kgに到達しました。" },
+  { title: "ギター", body: "3年ぶりに再チャレンジ中です(2026年8月〜)。Fコードに苦戦しています。" },
+  {
+    title: "旅行",
+    body: "北海道・大阪・仙台・東京・神奈川など、学生のうちに行けるときにと思い、年4回ほど旅行しています。",
+  },
+  {
+    title: "HIPHOP",
+    body: "ラップスタア、POPYOURS、BATTLE SUMMITなどをヘッズとして見てきました。心が揺れ、しびれるのが最高です。",
+  },
+  { title: "F1観戦", body: "角田選手が大好きです。いつか鈴鹿サーキットに観戦しに行きたいです。" },
+  { title: "ゲーム", body: "FPSが好きで、ほとんどのタイトルでダイヤランク帯にいます。" },
+];
 
 const EMAIL = "k.notsukitaira.sys23@morijyobi.ac.jp";
 
@@ -192,16 +205,17 @@ export default function AboutPage() {
       <section id="hobbies" className="mx-auto w-full max-w-6xl px-4 pb-20">
         <p className="text-sm font-semibold uppercase tracking-[0.28em] text-[#4c5d87]">hobbies</p>
         <h2 className="mt-3 text-2xl font-bold text-[#1f2937]">趣味</h2>
-        <ul className="mt-6 flex flex-wrap gap-3">
+        <div className="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {hobbies.map((hobby) => (
-            <li
-              key={hobby}
-              className="rounded-full border border-[#b79b5b]/35 bg-[#b79b5b]/10 px-5 py-2 text-sm font-semibold text-[#6b5630]"
+            <div
+              key={hobby.title}
+              className="rounded-[26px] border border-[#b79b5b]/35 bg-[#b79b5b]/10 p-6 shadow-sm"
             >
-              {hobby}
-            </li>
+              <h3 className="text-lg font-bold text-[#6b5630]">{hobby.title}</h3>
+              <p className="mt-2 text-sm leading-7 text-black/70">{hobby.body}</p>
+            </div>
           ))}
-        </ul>
+        </div>
       </section>
 
       {/* リンク */}
