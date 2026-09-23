@@ -211,11 +211,11 @@ export default async function WorkDetailPage({
   const youtubeId = findYouTubeId(work.links);
 
   return (
-    <main className="mx-auto w-full max-w-6xl px-4 py-16">
-      <div className="flex items-start gap-3">
+    <main className="mx-auto w-full max-w-6xl px-4 pb-16 pt-6 sm:py-16">
+      <div className="flex flex-col gap-3 sm:flex-row sm:items-start">
         <Link
           href="/#works"
-          className="mt-1 inline-flex shrink-0 items-center gap-1 rounded-full border border-black/10 bg-white px-3 py-1.5 text-sm font-semibold text-[#4c5d87] shadow-sm transition hover:border-black/20"
+          className="inline-flex shrink-0 items-center gap-1 rounded-full border border-black/10 bg-white px-3 py-1.5 text-sm font-semibold text-[#4c5d87] shadow-sm transition hover:border-black/20 sm:mt-1"
         >
           ← 戻る
         </Link>
