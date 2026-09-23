@@ -215,7 +215,7 @@ export default async function WorkDetailPage({
       <div className="flex flex-col gap-3 sm:flex-row sm:items-start">
         <Link
           href="/#works"
-          className="inline-flex shrink-0 items-center gap-1 rounded-full border border-black/10 bg-white px-3 py-1.5 text-sm font-semibold text-[#4c5d87] shadow-sm transition hover:border-black/20 sm:mt-1"
+          className="inline-flex shrink-0 items-center gap-1 self-start rounded-full border border-black/10 bg-white px-3 py-1.5 text-sm font-semibold text-[#4c5d87] shadow-sm transition hover:border-black/20 sm:mt-1"
         >
           ← 戻る
         </Link>
@@ -250,7 +250,7 @@ export default async function WorkDetailPage({
           <div className="mt-8 rounded-[24px] border border-black/5 bg-white p-6 shadow-sm sm:p-8">
         <h1 className="text-2xl font-bold text-[#1f2937] sm:text-3xl">{work.title}</h1>
 
-        <div className="mt-6 space-y-4 text-sm leading-7 text-black/70">
+        <div className="mt-6 space-y-4 break-words text-sm leading-7 text-black/70">
           <div>
             <p className="text-sm font-semibold uppercase tracking-[0.24em] text-[#4c5d87]">概要</p>
             <p className="mt-2 pl-4">{work.summary}</p>
@@ -271,7 +271,7 @@ export default async function WorkDetailPage({
                       >
                         {link.label}
                       </a>
-                      <span className="text-xs text-black/50">{link.href}</span>
+                      <span className="min-w-0 break-all text-xs text-black/50">{link.href}</span>
                     </>
                   ) : (
                     <span className="text-black/50">{link.label}（後日追加）</span>
@@ -290,7 +290,7 @@ export default async function WorkDetailPage({
                 {work.accounts.map((account, index) => (
                   <li key={`${work.slug}-account-${index}`}>
                     <span className="font-semibold text-[#1f2937]">{account.label}</span>
-                    <span className="ml-2 text-black/70">
+                    <span className="ml-2 break-all text-black/70">
                       ID: {account.id} / PW: {account.password}
                     </span>
                   </li>
