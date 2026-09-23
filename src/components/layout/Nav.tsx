@@ -12,7 +12,7 @@ type NavItem = {
 
 const items: NavItem[] = [
   { href: "/", label: "TOP" },
-  { href: "/about", label: "私について", matchPath: "/about" },
+  { href: "/#about", label: "私について", matchPath: "/about" },
   { href: "/#works", label: "作品" },
   { href: "/#news", label: "お知らせ" },
   { href: "/#contact", label: "お問い合わせ" },
@@ -66,7 +66,7 @@ export default function Nav() {
       <button
         type="button"
         onClick={() => setOpen(true)}
-        className="flex h-10 w-10 items-center justify-center rounded-full border border-[#2f3e5c]/20 text-[#2f3e5c] transition hover:border-[#2f3e5c]/40 md:hidden"
+        className="flex h-10 w-10 items-center justify-center text-[#2f3e5c] transition hover:text-[#1f2a44] md:hidden"
         aria-label="メニューを開く"
         aria-expanded={open}
       >
@@ -90,7 +90,7 @@ export default function Nav() {
                   <button
                     type="button"
                     onClick={() => setOpen(false)}
-                    className="flex h-9 w-9 items-center justify-center rounded-full border border-[#2f3e5c]/20 text-[#2f3e5c]"
+                    className="flex h-9 w-9 items-center justify-center text-[#2f3e5c] transition hover:text-[#1f2a44]"
                     aria-label="メニューを閉じる"
                   >
                     <svg aria-hidden="true" viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="1.8">
