@@ -87,10 +87,6 @@ export default function WorksGrid() {
         <div className="flex flex-col gap-3">
           <p className="text-sm font-semibold uppercase tracking-[0.28em] text-[#4c5d87]">works</p>
           <h2 className="text-3xl font-bold text-[#1f2937] sm:text-4xl">作品</h2>
-          <p className="max-w-3xl text-base leading-8 text-black/70">
-            課題の整理から設計、見た目の整え方まで一貫して考えた実例です。画像や説明文はあとから
-            差し替える前提で、いまは見やすい密度に整えています。
-          </p>
         </div>
 
         <ul className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
