@@ -100,28 +100,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* 強み */}
-      <section id="strengths" className="mx-auto w-full max-w-6xl px-4 pb-20">
-        <p className="text-sm font-semibold uppercase tracking-[0.28em] text-[#4c5d87]">
-          strengths
-        </p>
-        <h2 className="mt-3 text-2xl font-bold text-[#1f2937]">強み</h2>
-        <div className="mt-8 grid gap-5 md:grid-cols-3">
-          {strengths.map((item) => (
-            <div
-              key={item.title}
-              className="rounded-[26px] border border-[#2f3e5c]/12 bg-white p-6 shadow-sm"
-            >
-              <h3 className="text-lg font-bold text-[#1f2937]">{item.title}</h3>
-              <p className="mt-3 text-sm leading-7 text-black/70">{item.body}</p>
-            </div>
-          ))}
-        </div>
-        <p className="mt-6 text-sm leading-7 text-black/70">
-          これらを通して、技術力に加え、コミュニケーション力・現場対応力・学び続ける姿勢を身につけてきました。
-        </p>
-      </section>
-
       {/* 技術スタック */}
       <section id="stack" className="mx-auto w-full max-w-6xl px-4 pb-20">
         <p className="text-sm font-semibold uppercase tracking-[0.28em] text-[#4c5d87]">
@@ -152,30 +130,26 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* リンク */}
-      <section id="links" className="mx-auto w-full max-w-6xl px-4 pb-20">
-        <p className="text-sm font-semibold uppercase tracking-[0.28em] text-[#4c5d87]">links</p>
-        <h2 className="mt-3 text-2xl font-bold text-[#1f2937]">リンク</h2>
-        <div className="mt-6">
-          <a
-            href="https://github.com/kaji0428"
-            target="_blank"
-            rel="noreferrer"
-            className="inline-flex items-center gap-3 rounded-[26px] border border-[#2f3e5c]/12 bg-white px-6 py-4 shadow-sm transition hover:border-[#2f3e5c]/30"
-          >
-            <span className="flex h-10 w-10 items-center justify-center rounded-full border border-[#2f3e5c]/20 bg-[#eef1f7]">
-              <svg aria-hidden="true" viewBox="0 0 24 24" className="h-5 w-5 text-[#2f3e5c]" fill="currentColor">
-                <path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.54-3.88-1.54-.52-1.33-1.28-1.68-1.28-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.03 1.75 2.7 1.25 3.36.96.1-.74.4-1.25.73-1.54-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.24 2.76.12 3.05.74.81 1.18 1.84 1.18 3.1 0 4.43-2.69 5.41-5.26 5.69.42.36.78 1.08.78 2.17 0 1.56-.01 2.82-.01 3.2 0 .31.21.67.8.56A10.52 10.52 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z" />
-              </svg>
-            </span>
-            <span>
-              <span className="block text-xs font-semibold uppercase tracking-[0.24em] text-[#4c5d87]">
-                GitHub
-              </span>
-              <span className="block text-sm font-bold text-[#1f2937]">github.com/kaji0428</span>
-            </span>
-          </a>
+      {/* 強み */}
+      <section id="strengths" className="mx-auto w-full max-w-6xl px-4 pb-20">
+        <p className="text-sm font-semibold uppercase tracking-[0.28em] text-[#4c5d87]">
+          strengths
+        </p>
+        <h2 className="mt-3 text-2xl font-bold text-[#1f2937]">強み</h2>
+        <div className="mt-8 grid gap-5 md:grid-cols-3">
+          {strengths.map((item) => (
+            <div
+              key={item.title}
+              className="rounded-[26px] border border-[#2f3e5c]/12 bg-white p-6 shadow-sm"
+            >
+              <h3 className="text-lg font-bold text-[#1f2937]">{item.title}</h3>
+              <p className="mt-3 text-sm leading-7 text-black/70">{item.body}</p>
+            </div>
+          ))}
         </div>
+        <p className="mt-6 text-sm leading-7 text-black/70">
+          これらを通して、技術力に加え、コミュニケーション力・現場対応力・学び続ける姿勢を身につけてきました。
+        </p>
       </section>
 
       {/* 経歴 */}
@@ -228,6 +202,32 @@ export default function AboutPage() {
             </li>
           ))}
         </ul>
+      </section>
+
+      {/* リンク */}
+      <section id="links" className="mx-auto w-full max-w-6xl px-4 pb-20">
+        <p className="text-sm font-semibold uppercase tracking-[0.28em] text-[#4c5d87]">links</p>
+        <h2 className="mt-3 text-2xl font-bold text-[#1f2937]">リンク</h2>
+        <div className="mt-6">
+          <a
+            href="https://github.com/kaji0428"
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center gap-3 rounded-[26px] border border-[#2f3e5c]/12 bg-white px-6 py-4 shadow-sm transition hover:border-[#2f3e5c]/30"
+          >
+            <span className="flex h-10 w-10 items-center justify-center rounded-full border border-[#2f3e5c]/20 bg-[#eef1f7]">
+              <svg aria-hidden="true" viewBox="0 0 24 24" className="h-5 w-5 text-[#2f3e5c]" fill="currentColor">
+                <path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.54-3.88-1.54-.52-1.33-1.28-1.68-1.28-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.03 1.75 2.7 1.25 3.36.96.1-.74.4-1.25.73-1.54-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.24 2.76.12 3.05.74.81 1.18 1.84 1.18 3.1 0 4.43-2.69 5.41-5.26 5.69.42.36.78 1.08.78 2.17 0 1.56-.01 2.82-.01 3.2 0 .31.21.67.8.56A10.52 10.52 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z" />
+              </svg>
+            </span>
+            <span>
+              <span className="block text-xs font-semibold uppercase tracking-[0.24em] text-[#4c5d87]">
+                GitHub
+              </span>
+              <span className="block text-sm font-bold text-[#1f2937]">github.com/kaji0428</span>
+            </span>
+          </a>
+        </div>
       </section>
 
       {/* 連絡先 */}
