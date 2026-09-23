@@ -1,15 +1,29 @@
 const techStack = [
   {
     category: "フロントエンド",
-    items: ["TypeScript", "Next.js", "HTML", "CSS"],
+    items: ["HTML", "CSS", "JavaScript", "Tailwind CSS", "Bootstrap"],
   },
   {
     category: "バックエンド",
-    items: ["Java (Spring Boot)", "Python (Flask / FastAPI)"],
+    items: [
+      "Java (Spring Boot)",
+      "Python (Django / FastAPI / Flask)",
+      "PHP (Laravel)",
+      "TypeScript (Next.js)",
+    ],
   },
   {
     category: "インフラ・DB",
-    items: ["PostgreSQL", "Docker"],
+    items: [
+      "PostgreSQL",
+      "MySQL",
+      "SQLite",
+      "Docker",
+      "XAMPP",
+      "GitHub",
+      "GitLab",
+      "SourceTree",
+    ],
   },
   {
     category: "デザイン",
@@ -290,8 +304,11 @@ export default function AboutPage() {
           <p className="text-sm leading-7 text-black/70">
             ご連絡はメールが一番確実です。件名に「ポートフォリオの件」と入れていただけると見つけやすく助かります。
           </p>
-          <div className="mt-4 inline-flex rounded-2xl border border-[#b79b5b]/35 bg-[#b79b5b]/10 p-5">
-            <a href={`mailto:${EMAIL}`} className="text-base font-bold text-[#6b5630] underline-offset-4 hover:underline">
+          <div className="mt-4 inline-flex max-w-full rounded-2xl border border-[#b79b5b]/35 bg-[#b79b5b]/10 p-5">
+            <a
+              href={`mailto:${EMAIL}`}
+              className="break-all text-sm font-bold text-[#6b5630] underline-offset-4 hover:underline"
+            >
               {EMAIL}
             </a>
           </div>
