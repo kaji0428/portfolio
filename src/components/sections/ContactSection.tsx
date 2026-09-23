@@ -30,10 +30,6 @@ export default function ContactSection() {
         <div className="flex flex-col gap-3">
           <p className="text-sm font-semibold uppercase tracking-[0.28em] text-[#4c5d87]">contact</p>
           <h2 className="text-3xl font-bold text-[#1f2937] sm:text-4xl">お問い合わせ</h2>
-          <p className="max-w-3xl text-base leading-8 text-black/70">
-            就活用のポートフォリオのため、フォームではなく連絡先の案内を置いています。必要があれば
-            文言や連絡手段をあとから差し替えます。
-          </p>
         </div>
 
         <div className="grid gap-6">
