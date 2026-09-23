@@ -44,6 +44,25 @@ const qualifications = [
   { date: "2026年8月〜", title: "応用情報技術者試験 受験に向け学習中" },
 ];
 
+const jobs = [
+  {
+    title: "エンジニア(Web開発会社)",
+    body: "自社のホームページ改修や新規フレームワークの先行実装調査、学生インターン向けの課題作成を担当しています。実際のエンジニアの現場環境を学んでいます。",
+  },
+  {
+    title: "CoderDojo メンター",
+    body: "子供向けプログラミング道場「CoderDojo」に、1〜2か月に1回メンターとして参加しています。自分自身もこの機会がきっかけで今があると思っており、地元に新たなエンジニアを生み出すきっかけになればという思いで、地域貢献とアルバイトの一環として続けています。子供たちの柔軟な発想や想像力から学ぶことも多いです。",
+  },
+  {
+    title: "テレビ局",
+    body: "ブログ作成や動画編集(切り抜き、画像加工、モザイク処理、YouTubeへの投稿)を担当しています。公開され全世界に発信される責任を持ち、ミスやチェック漏れがないよう注意しながら取り組んでいます。",
+  },
+  {
+    title: "コンビニ",
+    body: "3年間勤務し、アルバイトスタッフの教育や良好な人間関係づくりに取り組んでいます。発注や締め作業など、責任のある業務も任せていただいています。",
+  },
+];
+
 const hobbies = [
   { title: "筋トレ", body: "ベンチプレス80kgに到達しました。" },
   { title: "ギター", body: "3年ぶりに再チャレンジ中です(2026年8月〜)。Fコードに苦戦しています。" },
@@ -182,6 +201,25 @@ export default function AboutPage() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* アルバイト */}
+      <section id="jobs" className="mx-auto w-full max-w-6xl px-4 pb-20">
+        <p className="text-sm font-semibold uppercase tracking-[0.28em] text-[#4c5d87]">
+          part-time jobs
+        </p>
+        <h2 className="mt-3 text-2xl font-bold text-[#1f2937]">アルバイト</h2>
+        <div className="mt-8 grid gap-5 sm:grid-cols-2">
+          {jobs.map((job) => (
+            <div
+              key={job.title}
+              className="rounded-[26px] border border-[#2f3e5c]/12 bg-white p-6 shadow-sm"
+            >
+              <h3 className="text-lg font-bold text-[#1f2937]">{job.title}</h3>
+              <p className="mt-3 text-sm leading-7 text-black/70">{job.body}</p>
+            </div>
+          ))}
         </div>
       </section>
 
