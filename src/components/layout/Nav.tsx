@@ -70,14 +70,14 @@ export default function Nav() {
       </button>
 
       {open ? (
-        <div className="fixed inset-0 z-[60] md:hidden">
+        <>
           <button
             type="button"
             aria-label="メニューを閉じる"
             onClick={() => setOpen(false)}
-            className="absolute inset-0 bg-black/30"
+            className="fixed inset-0 z-[60] bg-black/40 md:hidden"
           />
-          <div className="absolute right-0 top-0 flex h-full w-72 max-w-[80vw] flex-col gap-6 border-l border-black/5 bg-[#f7f5ef] p-6 shadow-xl">
+          <div className="fixed inset-y-0 right-0 z-[61] flex w-72 max-w-[80vw] flex-col gap-6 border-l border-black/5 bg-white p-6 shadow-xl md:hidden">
             <div className="flex items-center justify-between">
               <span className="text-sm font-black tracking-[0.08em] text-[#1f2937]">MENU</span>
               <button
@@ -111,7 +111,7 @@ export default function Nav() {
               })}
             </ul>
           </div>
-        </div>
+        </>
       ) : null}
     </nav>
   );
