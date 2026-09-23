@@ -212,10 +212,10 @@ export default async function WorkDetailPage({
 
   return (
     <main className="mx-auto w-full max-w-6xl px-4 py-16">
-      <div className="mx-auto w-full max-w-4xl">
+      <div className="relative mx-auto w-full max-w-4xl">
         <Link
           href="/#works"
-          className="mb-3 inline-flex items-center gap-1 text-sm font-semibold text-[#4c5d87] underline-offset-4 hover:underline"
+          className="absolute left-3 top-3 z-10 inline-flex items-center gap-1 rounded-full border border-black/10 bg-white/90 px-3 py-1.5 text-sm font-semibold text-[#4c5d87] shadow-sm backdrop-blur transition hover:bg-white"
         >
           ← 戻る
         </Link>
