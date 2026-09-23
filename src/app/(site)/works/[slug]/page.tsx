@@ -179,6 +179,23 @@ const works: Work[] = [
       },
     ],
   },
+  {
+    slug: "sensorhub",
+    title: "SensorHub",
+    summary: "校内のハッカソンで開発したセンサー管理アプリ",
+    period: "2026/8",
+    role: "3人開発 / 画面設計、フロントエンド、バックエンド",
+    tech: "TypeScript(Next.js)/PostgreSQL",
+    points:
+      "2週間という短い開発期間だったため、AIを活用して画面設計を進めました。「センサーを使ったシステムを自由に作ってください」というお題に対し、実際に複数のセンサーを扱うときにこのようなシステムがあれば便利だと考え、制作に至りました。また、後輩との開発だったため、issueで進捗や担当を管理しながら進めました。",
+    links: [
+      {
+        label: "GitHub",
+        href: "https://github.com/Nayuta9382/summer-hackathon-2026/issues",
+      },
+      { label: "動画リンク", href: "https://youtu.be/67l0WswLb64" },
+    ],
+  },
 ];
 
 function extractYouTubeId(url: string) {

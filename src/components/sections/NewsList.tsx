@@ -5,6 +5,7 @@
 };
 
 const news: NewsItem[] = [
+  { date: "2026-09-20", title: "作品の追加とレスポンシブの修正を行いました", href: "#" },
   { date: "2026-01-20", title: "TOPページのデザインを更新しました", href: "#" },
   { date: "2026-01-12", title: "作品の見せ方を調整しました", href: "#" },
   { date: "2025-12-28", title: "Aboutページの構成を追加しました", href: "#" },
@@ -17,9 +18,6 @@ export default function NewsList() {
         <div className="flex flex-col gap-3">
           <p className="text-sm font-semibold uppercase tracking-[0.28em] text-[#4c5d87]">news</p>
           <h2 className="text-3xl font-bold text-[#1f2937] sm:text-4xl">お知らせ</h2>
-          <p className="max-w-3xl text-base leading-8 text-black/70">
-            更新情報を軽く残しておくと、サイトが育っていることが伝わります。
-          </p>
         </div>
 
         <ul className="overflow-hidden rounded-[28px] border border-[#2f3e5c]/10 bg-white shadow-sm">
